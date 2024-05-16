@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="Images/https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  .mySlides {
+    display:none;
+  }
+  </style>
+  <script type="text/javascript">
+    var i = 0;
+    var b = 1;
+    var s="";
+    var ar=0;
+    var slide=["Web Developer","Web Design"];
+    function fun1() {
+      if (b == 1) {
+        s=s+slide[ar].charAt(i);
+        document.getElementById("slide").innerHTML = s;
+        i++;
+        if (i == slide[ar].length) {
+          b = 2;
+        }
+      }
+      else {
+        s=s.substring(0,s.length-1);
+        i--;
+        document.getElementById("slide").innerHTML = s;
+        if (i <= 0) {
+          b = 1;
+          s="";
+          ar++;
+          if(ar==slide.length){
+            ar=0;
+          }
+        }
+      }
+    }
+    // resume
+    var k = 1;
+    function showresume() {
+      if (k == 1) {
+        var r = new XMLHttpRequest();
+        r.onreadystatechange = function () {
+          if (r.readyState === 4) {
+            document.getElementById("resume1").innerHTML = r.responseText;
+          }
+        };
+        r.open("get", "resume1.jsp");
+        r.send();
+        k = 0;
+
+        document.getElementById("btn1").innerHTML = "Close";
+        document.getElementById("resume2").innerHTML = "";
+        document.getElementById("btn2").innerHTML = "Click here";
+
+      }
+      else {
+        document.getElementById("resume1").innerHTML = "";
+        k = 1;
+        document.getElementById("btn1").innerHTML = "Click here";
+
+      }
+    }
+    var l = 1;
+    function showresume1() {
+      if (l == 1) {
+        var r = new XMLHttpRequest();
+        r.onreadystatechange = function () {
+          if (r.readyState === 4) {
+            document.getElementById("resume2").innerHTML = r.responseText;
+          }
+        };
+        r.open("get", "resume2.jsp");
+        r.send();
+        l = 0;
+        document.getElementById("btn2").innerHTML = "Close";
+        document.getElementById("resume1").innerHTML = "";
+        document.getElementById("btn1").innerHTML = "Click here";
+      }
+      else {
+        document.getElementById("resume2").innerHTML = "";
+        l = 1;
+        document.getElementById("btn2").innerHTML = "Click here";
+      }
+    }
+    setInterval("fun1()", 300);
+
+    
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+  </script>
+</head>
+
+<body>
+  <a href="#myTopnav"><div class="cursor-top"><i style="font-size:45px" class="fa " id="cr">&#xf01b;</i></div></a>
+  
+ 
+   
+            <div class="topnav" id="myTopnav" style="z-index:200">
+              
+<!--               <video autoplay muted loop id="background-video" class="port">
+        <source src="Images/design (2).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+          </video>-->
+              <img src="Images/Vikash.png" class="port">
+              <a class="nav-link m1"  href="#home"><b class="fonttt">Home</b></a>
+              <a class="nav-link m1"  href="#about"><b class="fonttt">About</b></a>
+                <a class="nav-link m1"  href="#service"><b class="fonttt">Services</b></a>
+                <a class="nav-link m1"  href="#bio"><b class="fonttt">Biography</b></a>
+                <a class="nav-link m1"  href="#skill"><b class="fonttt">Skills</b></a>
+                <a class="nav-link m1"  href="#r1"><b class="fonttt">Resume</b></a>
+                <a class="nav-link m1"  href="#project"><b class="fonttt">Project</b></a> 
+                <a class="nav-link m1"  href="#contact"><b class="fonttt">Contact</b></a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+            
+            <div class="background">
+              <img class="backimg" src="Images/pp.jpg" alt="">
+              <!-- <div class="div1"></div> -->  
+      <div class="div2">
+      <div class="divA1">
+        <h3><b>Hii,</b></h3>
+        <h1><b>I'm <span>Er Vikash Kumar</span></b></h1>
+        <h3 class="mt-4">
+          <span id="slide"></span>
+          <span class="cursor typing" id="slide1"></span>
+        </h3><br>
+        <p class="pp">Computer science engineer turned web developer merging logic
+          and creativity in the digital realm.
+          A computer science engineer crafting web experiences: code-driven innovation
+          at its finest.</p>
+        <br>
+        <a href="#contact" class="cc">Contact</a>
+      </div>
+      <div class="divA2">
+        <img src="Images/IMG20211023231839-removebg-preview.png" alt="" class="vk1">
+      </div>
+    </div>
+  </div> 
+
+
+  <!-- About Me -->
+
+  <div class="about" id="about">
+<!--      <video autoplay muted loop id="background-video">
+        <source src="Images/design (2).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+          </video>-->
+    <div class="about-1">
+      <h1 class="heading">About Me</h1>
+
+      <div class="about-row1">
+        <img src="Images/a1.jpg" alt="" class="imgvik">
+      </div><br>
+      <div class="about-row2">
+        <h4><b>A Few Words About Me </b></h4><br>
+        <p class="pp1">I love Coding and Photography and have been working on my
+          portfolio since
+          2023. I Can give your business a new Creative start right away! Contact me
+          and we will discuss your projects!</p>
+        <p class="pp1">I am fresher in Java, DSA, HTML, CSS, Javascript for developing hybrid web application. [ 1
+          internship at ZN infotech Pvt. Ltd. ]</p>
+        <p class="pp1"> I have worked on frontend technologies ( HTML, CSS, Javascript, Bootstrap) and Backend
+          technologies ( Java and MySQL) for almost a year
+          and had done two projects.</p>
+        <p class="pp1">I have a Silver Badge for Java on HackerRank.
+          Skillful in Java and Data Structure with hands on experience on web
+          development tools.</p>
+        <p class="pp1">Aspiring for a challenging career in Software Development and AI as to use my learn skills and
+          experience for best results.</p>
+        <h5 class="hp">Having O6 Months of Experience as a traning period. I Would Love to make your Ideas real. I Can
+          give your business a new Creative start right away!</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="service" id="service">
+    <div class="service-1">
+      <h1 class="heading2">Services</h1><br><br>
+      <div class="service-row1">
+        <img src="Images/web.avif" alt="" class="imgweb">
+        <br><br>
+        <h3><b>Web Development</b></h3>
+      </div>
+      <div class="service-row2">
+        <img src="Images/UI.jpg" alt="" class="imgweb1">
+        <br><br>
+        <h3><b>UX and UI Designer</b></h3>
+      </div>
+      <div class="service-row3">
+        <img src="Images/home.jpg" alt="" class="imgweb2">
+        <br><br>
+        <h3><b>Home Automation <br> (Coming Soon)</b></h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Biography -->
+  <div class="bio" id="bio">
+    <div class="bio-1">
+      <h1 class="heading6">Biography</h1>
+
+      <div class="bio-row1">
+        <img src="Images/a.jpg" alt="" class="imgvik1">
+      </div><br>
+      <div class="bio-row2">
+        <h4 class="heading5"><b>A Lead UI Designer & Web Developer </b></h4><br>
+        <p class="a3">I love coding and UI design and have been working on my portfolio since 2023. I Can give your
+          business a new Creative start right away! Contact me and we will discuss your projects!</p>
+        <hr class="hr11">
+        <!--style="width:84%;margin-left:46px;border: 3px solid #040404;-->
+        <div class="t1">
+          <b>Name -</b> Er. Vikash Kumar<br>
+          <b>Email -</b> er.vikashgaud9919@gmail.com
+        </div>
+        <div class="t2">
+          <b>From -</b> Basti, UP<br>
+          <b>Mobile -</b> +91 7705893810
+        </div><br><br><br><br>
+        <b class="follow">Follow me on</b>
+        <a href="https://www.facebook.com/profile.php?id=100022504236989" target="_blank" class="fa fa-facebook socal"></a>
+        <a href="https://www.linkedin.com/in/vikashgaud/" target="_blank" class="fa fa-linkedin socal"></a>
+        <a href="https://www.instagram.com/er.vikashgaud2002/" target="_blank" class="fa fa-instagram socal"></a><br><br>
+        <a href="#contact"><button class="btn btn-success">Hire me</button></a>
+      </div>
+    </div>
+
+  </div>
+ 
+
+
+  <!-- Skill -->
+
+  <div class="skill" id="skill">
+    <div class="skill-1">
+      <h1 class="heading3">Skills</h1>
+      <div class="skill-row1">
+        <h4><b>A Few Words My Skills </b></h4>
+        <li class="pp2"> Proficient in HTML and CSS for creating visually appealing and responsive web pages.</li>
+        <li class="pp2"> Strong knowledge of JavaScript for implementing interactive and dynamic functionalities on the
+          client-side.</li>
+        <li class="pp2"> Experienced in Java programming language for building robust and scalable applications.</li>
+        </p>
+        <li class="pp2"> Familiarity with Java frameworks like Spring for efficient backend development.</li>
+        <li class="pp2"> Able to integrate HTML, CSS, JavaScript, and Java to develop full-stack web applications.</li>
+        <li class="pp2"> Strong proficiency in Java programming language for server-side development.</li>
+        <li class="pp2"> Extensive experience in SQL for efficient database management and querying.</li>
+        <li class="pp2"> Ability to design and develop robust backend systems using Java and SQL.</li>
+        <li class="pp2"> Deep understanding of database concepts, normalization, and optimization techniques.</li>
+        <li class="pp2"> Proficient in integrating Java applications with relational databases using JDBC or ORM
+          frameworks like Hibernate.</li>
+        <div class="container mt-3">
+          <h5 class="co1">HTML</h5>
+          <div class="progress" style="background-color: white;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:95%">95%</div>
+          </div>
+          <h5 class="co1">CSS</h5>
+          <div class="progress" style="background-color: white;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:75%">75%</div>
+          </div>
+          <h5 class="co1">JAVA SCRIPT</h5>
+          <div class="progress" style="background-color: white;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:60%">60%</div>
+          </div>
+          <h5 class="co1">JAVA</h5>
+          <div class="progress" style="background-color: white;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:65%">65%</div>
+          </div>
+          <h5 class="co1">BOOTSTRAP</h5>
+          <div class="progress" style="background-color: white;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:75%">75%</div>
+          </div>
+          <h5 class="co1">SQL</h5>
+          <div class="progress" style="background-color: white;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:70%">70%</div>
+          </div>
+        </div>
+      </div><br>
+      <div class="skill-row2">
+        <img src="Images/skill.webp" alt="" class="tool">
+      </div>
+    </div>
+  </div>
+  <!-- Resume -->
+
+  <div class="r1" id="r1">
+    <h1 class="heading4">Resume</h1><br>
+    <b style="font-size:22px;">Show And Download Resume 1</b><br><br>
+    <button onclick="showresume()" class="btn btn-success" id="btn1">Click here</button>
+    <div style="width:100%;padding-top:30px;padding-bottom:30px;" id="Resume1"></div>
+  </div>
+  <div class="r2">
+    <b style="font-size:22px;">Show And Download Resume 2</b><br><br>
+    <button onclick="showresume1()" class="btn btn-success" id="btn2">Click here</button>
+    <div style="width:100%;padding-top:30px;padding-bottom:30px;" id="Resume2"></div>
+  </div>
+<!-- Project -->
+
+      <div class="project" id="project">
+        <br><br>
+       <h1 class="heading5">Project</h1>
+<div class="project_box">
+  <div class="project_box1">
+    <div class="w3-container">
+      <h2>PT.M.S.K.D.College</h2>
+    </div>
+    <div class="w3-content w3-section">
+      <img class="mySlides1 w3-animate-top" src="Images/c2.PNG" alt="search" style="width:100%; height: 411px;border-radius: 15px;">
+      <img class="mySlides1 w3-animate-top" src="Images/c1.PNG" alt="search" style="width:100%; height: 411px;border-radius: 15px;">
+      <img class="mySlides1 w3-animate-bottom" src="Images/c2.PNG" alt="search" style="width:100%; height: 411px;border-radius: 15px;">
+      <img class="mySlides1 w3-animate-bottom" src="Images/c1.PNG" alt="search" style="width:100%; height: 411px;border-radius: 15px;">
+    
+      <div class="visit"><a href="https://www.pmskcollege.org.in" traget="_blank"><button class="visitbtn">Visit</button></a></div>
+    </div>
+  </div>
+  <div class="project_box2">
+    <div class="w3-container">
+      <h2>Live Health Consultation</h2>
+    </div>
+    <div class="w3-content w3-section">
+      <img class="mySlides2 w3-animate-bottom" src="Images/s4.png" alt="search" style="width:100%; height: 411px;border-radius: 15px;">
+      <img class="mySlides2 w3-animate-bottom" src="Images/s1.png" alt="search" style="width:100%; height: 411px;border-radius: 15px;">
+      <img class="mySlides2 w3-animate-top" src="Images/s2.png" alt="search" style="width:100%; height: 411px;border-radius: 15px;">
+      <img class="mySlides2 w3-animate-top" src="Images/s3.png" alt="search" style="width:100%; height: 411px;border-radius: 15px;">
+    
+     <div class="visit1"><button class="visitbtn1">Coming Soon</button></div>
+    </div>
+  </div>
+  <div class="project_box3">
+    <div class="w3-container">
+      <h2>Let's Get Easy Jobs</h2>
+    </div>
+    <div class="w3-content w3-section">
+      <img class="mySlides3 w3-animate-bottom" src="Images/b1.jpeg" alt="search"  style="width:100%; height: 411px;border-radius: 15px;">
+      <img class="mySlides3 w3-animate-bottom" src="Images/b2.jpeg" alt="search2"  style="width:100%; height: 411px;border-radius: 15px;">
+      <img class="mySlides3 w3-animate-top" src="Images/b3.jpeg" alt="search3"  style="width:100%; height: 411px;border-radius: 15px;">
+      <img class="mySlides3 w3-animate-top" src="Images/b2.jpeg" alt="search4"  style="width:100%; height: 411px;border-radius: 15px;">
+    
+       <div class="visit2"><button class="visitbtn2">Coming soon</button></div>
+    </div>
+  </div>
+</div>
+      </div>
+
+  <!-- Contact -->
+
+  <div class="contact" id="contact">
+    <div class="contact-1">
+      <h1 class="heading4">Contact</h1>
+
+      <div class="contact-row1">
+        <h4><b>Address Info</b></h4><br>
+        <div class="col-1 pr-0 icon">
+          <i class="fa fa-envelope-open" aria-hidden="true"></i>
+        </div>
+        <div class="col-11 email">
+          <h5>Email</h5>
+          <p><a href="mailto:example@email.com" class="acol">er.vikashgaud9919@gmail.com</a></p>
+          <p><a href="mailto:example@email.com" class="acol">vikashkumargaud2355835@gmail.com</a></p>
+        </div><br>
+        <div class="col-1 pr-0 icon">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </div>
+        <div class="col-11 email">
+          <h5><b>Phone</b></h5>
+          <p>+91 7705893810</p>
+          <p>+91 9919707066</p>
+        </div><br>
+        <div class="col-1 pr-0 icon">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+        <!--<a href="https://www.google.com/maps/place/Er.+Vikash+Kumar/@26.8126263,82.5334409,15.45z/data=!4m6!3m5!1s0x3990b78b4ae3e5df:0x47cf3407d7217708!8m2!3d26.8128281!4d82.5360386!16s%2Fg%2F11kpznwts6?entry=ttu"style="text-decoration: none;color: black;" target="_blank">-->
+            <div class="col-11 email">
+          <h5><b>Address</b></h5>
+          <p>Sukrauli Chaudhary, Harraiya, Basti </p>
+          <p>Uttar Pradesh (272155), Rd NH-24</p>
+<!--          <img src="Images/Map.PNG" alt=""style="width: 100%;">-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.8261161288665!2d82.53323067516509!3d26.81366476434058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3990b78b4ae3e5df%3A0x47cf3407d7217708!2sEr.%20Vikash%20Kumar!5e0!3m2!1sen!2sin!4v1691663064766!5m2!1sen!2sin" width="100%" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+<!--</a>-->
+      </div>
+      <div class="contact-row2">
+        <h4><b>Get In Touch </b></h4><br>
+        <div class="col-1 pr-0 icon">
+          <i class="fa mr-2 fa-user" aria-hidden="true"></i>
+        </div>
+        <div class="col-11 email">
+          <h5><b>Name</b></h5>
+          <input class="inp1" type="text" placeholder="Name">
+        </div>
+        <div class="col-1 pr-0 icon">
+          <i class="fa fa-envelope-open" aria-hidden="true"></i>
+        </div>
+        <div class="col-11 email">
+          <h5><b>Email</b></h5>
+          <input class="inp1" type="text" placeholder="Email">
+        </div>
+        <div class="col-1 pr-0 icon">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </div>
+        <div class="col-11 email">
+          <h5><b>Phone</b></h5>
+          <input class="inp1" type="text" placeholder="Phone">
+        </div>
+        <div class="col-1 pr-0 icon">
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </div>
+        <div class="col-11 email">
+          <h5><b>Massage</b></h5>
+          <textarea class="inp1" type="text" placeholder="Massage....."></textarea>
+        </div>
+        <input type="submit" value="Submit" class="subbtn">
+      </div>
+    </div>
+  </div>
+  <div class="F-B"> 
+    
+      <h1 class="heh">WD Portfolio</h1>
+      <div class="F-B-Box">
+     <div class="hef"><i class="fa fa-phone"></i> +91 7705893810</div>
+      <div class="hef1"><i class="fa fa-map-marker"></i> Basti, Uttar Predesh , 272155</div>
+      <div class="hef2"><i class="fa fa-envelope"></i> er.vikashgaud9919@gmail.com</div></div>
+  <br>
+    <br><br>
+    
+    <div class="copy"><div class="part0">© Copyright 2023, All rights reserved with<b> WD Portfolio</b> | Design by Er. Vikash Kumar</div>
+      <div class="soc"><a target="_blank" href="https://www.facebook.com/profile.php?id=100022504236989" style="color: white;"><i class="fa fa-facebook-square fac"></i></a>
+      <a target="_blank" href="https://www.google.com/"style="color: white;" ><i class="fa fa-google-plus go"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/vikashgaud/" style="color: white;"><i class="fa fa-linkedin-square lin"></i></a>
+      <a target="_blank" href="https://github.com/vikashgaud" style="color: white;"><i class="fa fa-github git"></i></a>
+      <a target="_blank" href="https://www.instagram.com/er.vikashgaud2002/" style="color: white;"><i class="fa fa-instagram ins"></i></a>
+      </div></div>
+   
+</div>
+<script>
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides1");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2500);    
+}
+
+
+  var myIndex1 = 0;
+  carousel1();
+  function carousel1() {
+    var j;
+    var x = document.getElementsByClassName("mySlides2");
+    for (j = 0; j < x.length; j++) {
+      x[j].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel1, 7000);    
+  }
+
+  var myIndex2 = 0;
+carousel2();
+function carousel2() {
+  var k;
+  var x = document.getElementsByClassName("mySlides3");
+  for (k = 0; k < x.length; k++) {
+    x[k].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel2, 2500);    
+}
+  </script>
+
+</body>
+
+</html>
