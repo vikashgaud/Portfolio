@@ -1525,6 +1525,20 @@ font-size: 22px;
         padding: 10px;
       }
 }
+@media screen and (max-width: 408px){
+  .project_box1 {
+    width: 88%;
+    margin: 4% 13% 13% 6%;
+  }
+  .project_box2 {
+    width: 88%;
+    margin: 4% 13% 13% 6%;
+  }
+  .project_box3 {
+    width: 88%;
+    margin: 4% 13% 13% 6%;
+  }
+}
 @media screen and (max-width: 405px){
   .F-B {
     height: 381px;
