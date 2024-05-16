@@ -55,7 +55,7 @@
             document.getElementById("resume1").innerHTML = r.responseText;
           }
         };
-        r.open("get", "resume1.jsp");
+        r.open("get", "resume1.html");
         r.send();
         k = 0;
 
@@ -80,7 +80,7 @@
             document.getElementById("resume2").innerHTML = r.responseText;
           }
         };
-        r.open("get", "resume2.jsp");
+        r.open("get", "resume2.html");
         r.send();
         l = 0;
         document.getElementById("btn2").innerHTML = "Close";
@@ -307,12 +307,12 @@ function myFunction() {
     <h1 class="heading4">Resume</h1><br>
     <b style="font-size:22px;">Show And Download Resume 1</b><br><br>
     <button onclick="showresume()" class="btn btn-success" id="btn1">Click here</button>
-    <div style="width:100%;padding-top:30px;padding-bottom:30px;" id="Resume1"></div>
+    <div style="width:100%;padding-top:30px;padding-bottom:30px;" id="resume1"></div>
   </div>
   <div class="r2">
     <b style="font-size:22px;">Show And Download Resume 2</b><br><br>
     <button onclick="showresume1()" class="btn btn-success" id="btn2">Click here</button>
-    <div style="width:100%;padding-top:30px;padding-bottom:30px;" id="Resume2"></div>
+    <div style="width:100%;padding-top:30px;padding-bottom:30px;" id="resume2"></div>
   </div>
 <!-- Project -->
 
